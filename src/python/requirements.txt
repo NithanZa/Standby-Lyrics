@@ -1,0 +1,4 @@
+syncedlyrics
+spotipy
+Flask
+python-dotenv
