@@ -12,8 +12,8 @@ def ping():
 @app.route('/lyrics/<int:position>')
 @app.route('/lyrics/<int:position>/updated')
 def lyrics(position: int):
-    return get_queue_lyrics(position, request.path.endswith("/new"))
+    return get_queue_lyrics(position, not request.path.endswith("/updated"))
 
 
-if __name__ == '__main__':
+def run_app():
     app.run(debug=True)
